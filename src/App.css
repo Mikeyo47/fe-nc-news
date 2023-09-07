@@ -1,0 +1,23 @@
+.article_card {
+    border: solid 2px blue
+}
+
+nav {
+    border: solid 2px red
+}
+
+.logo {
+    border: solid 2px rgb(193, 6, 103)
+}
+
+.profile_button {
+    border: solid 2px rgb(6, 193, 40)
+}
+
+.topic_nav {
+    border: solid 2px rgb(159, 6, 193)
+}
+
+section {
+    border: solid 2px rgb(153, 224, 59)
+}
