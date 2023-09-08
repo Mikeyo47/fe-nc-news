@@ -21,3 +21,9 @@ export const getArticle = (articleId) => {
         .get(`/articles/${articleId}`)
         .then((response) => response.data.article)
 }
+
+export const getComments = (articleId) => {
+    return NCNApi
+        .get(`/articles/${articleId}/comments`)
+        .then((response) => response.data.comments)
+}
