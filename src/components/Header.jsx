@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { getTopics } from "../utils/api";
+import { Link } from "react-router-dom";
 
 export default function Header() {
     const [topicsList, setTopicsList] = useState([]);
@@ -12,7 +13,9 @@ export default function Header() {
 
     return (
         <nav>
-            <h1 className="logo">NC NEWS</h1>
+            <Link to={"/"}>
+                <h1 className="logo">NC NEWS</h1>
+            </Link>
             <button className="profile_button">Profile</button>
             <ul className="topic_nav">
                 {topicsList.map(topic => {
