@@ -27,3 +27,9 @@ export const getComments = (articleId) => {
         .get(`/articles/${articleId}/comments`)
         .then((response) => response.data.comments)
 }
+
+export const patchArticleVotes = (vote, articleId) => {
+    return NCNApi
+        .patch(`/articles/${articleId}`, vote)
+        .then((response) => response.data.article)
+}
