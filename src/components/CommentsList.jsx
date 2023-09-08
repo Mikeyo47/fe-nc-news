@@ -15,6 +15,9 @@ export default function CommentsList({articleId}) {
     }, []);
 
     if (isLoading) return <p>Loading...</p>
+    if (commentsList.length === 0) {
+        return <p>No comments yet. Be the first!</p>
+    }
 
     return (
         <section className="comments-list">

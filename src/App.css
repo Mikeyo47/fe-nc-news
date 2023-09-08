@@ -37,3 +37,7 @@ nav {
 .comments-list {
     border: solid 2px rgb(105, 159, 214)
 }
+
+ul {
+    list-style: none;
+}
