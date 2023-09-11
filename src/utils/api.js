@@ -33,3 +33,9 @@ export const patchArticleVotes = (vote, articleId) => {
         .patch(`/articles/${articleId}`, vote)
         .then((response) => response.data.article)
 }
+
+export const postComment = (comment, articleId) => {
+    return NCNApi
+        .post(`/articles/${articleId}/comments`, comment)
+        .then((response) => response.data.comment)
+}

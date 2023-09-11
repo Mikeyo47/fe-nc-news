@@ -9,6 +9,7 @@ export default function ArticlePage() {
     const [article, setArticle] = useState({});
     const [isLoading, setIsLoading] = useState(true);
     const [votes, setVotes] = useState(0);
+    const [hasVoted, setHasVoted] = useState(false);
 
     useEffect(() => {
         getArticle(article_id).then((article) => {
@@ -36,13 +37,17 @@ export default function ArticlePage() {
                 <button onClick={() => {
                     setVotes((currentVotes) => currentVotes + 1);
                     handleVote(1)
-                }}>
+                    setHasVoted(true)
+                    }
+                } disabled={hasVoted}>
                 +
                 </button>
                 <button onClick={() => {
                     setVotes((currentVotes) => currentVotes - 1);
                     handleVote(-1)
-                }}>
+                    setHasVoted(true)
+                    }
+                } disabled={hasVoted}>
                 -
                 </button>
             </div>
