@@ -34,7 +34,7 @@ nav {
     border: solid 2px rgb(79, 35, 57)
 }
 
-.comments-list {
+.comments-list, .no-comments-list {
     border: solid 2px rgb(105, 159, 214)
 }
 
