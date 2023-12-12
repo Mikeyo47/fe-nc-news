@@ -1,6 +1,6 @@
 export default function ArticleCard({article}) {
     return (
-        <div className="article_card">
+        <div className="article_card_content">
             <h2 className="title_card">{article.title}</h2>
             <p className="author_card">By: {article.author}</p>
             <p className="topic_card">Topic: {article.topic}</p>

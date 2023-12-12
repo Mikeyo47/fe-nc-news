@@ -26,7 +26,7 @@ export default function ArticlePage() {
     }
 
     return (
-        <section className="article-page">
+        <div className="article-page">
             <div className="article">
                 <h2 className="article_title">{article.title}</h2>
                 <p className="author_article">By: {article.author}</p>
@@ -34,24 +34,24 @@ export default function ArticlePage() {
                 <img className="img_article" src={article.article_img_url}></img>
                 <p className="text_article">{article.body}</p>
                 <p className="votes_article">Votes: {votes}</p>
-                <button onClick={() => {
+                <button className="thumbs-up-btn" onClick={() => {
                     setVotes((currentVotes) => currentVotes + 1);
                     handleVote(1)
                     setHasVoted(true)
                     }
                 } disabled={hasVoted}>
-                +
+                <i className={"fa-solid fa-thumbs-up"}></i>
                 </button>
-                <button onClick={() => {
+                <button className="thumbs-down-btn" onClick={() => {
                     setVotes((currentVotes) => currentVotes - 1);
                     handleVote(-1)
                     setHasVoted(true)
                     }
                 } disabled={hasVoted}>
-                -
+                <i className={"fa-solid fa-thumbs-down"}></i>
                 </button>
             </div>
             <CommentsList articleId={article.article_id}/>
-        </section>
+        </div>
     )
 }

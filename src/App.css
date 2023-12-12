@@ -1,43 +1,145 @@
-.article_card {
-    border: solid 2px blue
+.App {
+  padding: 50px;
 }
 
 nav {
-    border: solid 2px red
+  border: solid 2px red;
 }
 
 .logo {
-    border: solid 2px rgb(193, 6, 103)
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: red;
+  font-size: 50px;
 }
 
 .profile_button {
-    border: solid 2px rgb(6, 193, 40)
+  border: solid 2px rgb(6, 193, 40);
 }
 
 .topic_nav {
-    border: solid 2px rgb(159, 6, 193)
+  border: solid 2px rgb(159, 6, 193);
 }
 
 .article-page {
-    border: solid 2px rgb(153, 224, 59)
+  border: solid 2px rgb(153, 224, 59);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }
 
 .article {
-    border: solid 2px rgb(174, 108, 21)
+  border: solid 2px rgb(174, 108, 21);
+  display: flex;
+  margin: 10px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .add-comment {
-    border: solid 2px rgb(24, 71, 100)
+  border: solid 2px rgb(24, 71, 100);
 }
 
 .comment-card {
-    border: solid 2px rgb(79, 35, 57)
+  border: solid 2px rgb(79, 35, 57);
 }
 
-.comments-list, .no-comments-list {
-    border: solid 2px rgb(105, 159, 214)
+.comments-list,
+.no-comments-list {
+  border: solid 2px rgb(105, 159, 214);
 }
 
 ul {
-    list-style: none;
+  list-style: none;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(1, 600px);
+  grid-template-rows: repeat(10, 1fr);
+  gap: 10px;
+  justify-content: space-evenly;
+}
+
+@media (min-width: 1366px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 600px);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+  }
+}
+
+@media (min-width: 1940px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 600px);
+    grid-template-rows: repeat(6, 1fr);
+    gap: 10px;
+  }
+}
+
+.add-article-button {
+  grid-row: 1;
+  align-self: center;
+}
+
+.sort-by-dropdown {
+  grid-row: 1;
+  align-self: center;
+}
+
+.article_card_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  color: black;
+}
+
+.article_card_content:hover {
+  box-shadow: 10px 10px 15px 5px rgba(0, 0, 0, 0.5);
+  transform: scale(1.05);
+}
+
+.img_card {
+  width: 500px;
+}
+
+.thumbs-up-btn {
+  background: none;
+  border: none;
+}
+
+.thumbs-up-btn:hover {
+  cursor: pointer;
+  .fa-thumbs-up {
+    color: rgb(0, 207, 0);
+  }
+}
+
+.thumbs-down-btn {
+  background: none;
+  border: none;
+}
+
+.thumbs-down-btn:hover {
+  cursor: pointer;
+  .fa-thumbs-down {
+    color: rgb(255, 0, 0);
+  }
+}
+
+.fa-thumbs-up {
+  color: green;
+}
+
+.fa-thumbs-down {
+  color: rgb(170, 0, 0);
 }

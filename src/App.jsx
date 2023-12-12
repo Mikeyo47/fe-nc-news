@@ -7,7 +7,7 @@ import ArticlePage from './components/ArticlePage'
 function App() {
 
   return (
-    <>
+    <div className='App'>
       <Header />
       <main>
         <Routes>
@@ -16,7 +16,7 @@ function App() {
           <Route path="/articles/p=:p" element={<ArticlesList />} />
         </Routes>
       </main>
-    </>
+    </div>
   )
 }
 
